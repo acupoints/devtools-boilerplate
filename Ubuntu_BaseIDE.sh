@@ -1,3 +1,7 @@
+## Set administrator password
+sudo passwd root
+su root
+
 ## Install pyenv
 apt update -y
 apt install -y make build-essential libssl-dev zlib1g-dev \
