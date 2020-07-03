@@ -36,3 +36,25 @@ node --version
 npm --version
 npm install -g yarn
 yarn --version
+
+## Generate GitHub SSH keys
+/**
+*Add GitLab and SSH keys.txt
+*/
+### MINGW64:PROJECT NAME
+=================================
+ssh-keygen -t rsa -C "lanbinzheng@foxmail.com" -b 4096
+{ENTER}{ENTER}{ENTER}
+cat ~/.ssh/id_rsa.pub | clip
+{ENTER}
+ssh -T git@gitlab.com
+{yes}{ENTER}
+
+===
+$ ssh -T git@github.com
+Hi acupoints! You've successfully authenticated, but GitHub does not provide shell access.
+
+[控制面板][用户帐户][凭据管理器][Windows 凭据]
+git:https://github.com
+(删除)_
+
