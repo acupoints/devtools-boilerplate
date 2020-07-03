@@ -3,7 +3,7 @@ sudo passwd root
 su root
 
 ## Install common tools
-apt install -y git vim curl
+apt install -y vim make git curl
 
 ## Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
