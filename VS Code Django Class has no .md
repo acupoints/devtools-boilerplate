@@ -17,7 +17,7 @@ pip install pylint-django
 
 ```json
 {
-    ...
+    //...
     "python.linting.pylintArgs": [
         "--load-plugins=pylint-django"
     ],
