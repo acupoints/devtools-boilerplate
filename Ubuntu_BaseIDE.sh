@@ -13,8 +13,10 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi
 exec "$SHELL"
 
 apt update -y
-apt install -y build-essential python-dev python-setuptools python-pip python-smbus build-essential \
-libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev
+apt install -y liblzma-dev libffi-dev tk-dev xz-utils libncursesw5-dev libncurses5-dev llvm libsqlite3-dev \
+libreadline-dev libbz2-dev zlib1g-dev libssl-dev build-essential make libffi-dev openssl libssl-dev \
+tk-dev libsqlite3-dev zlib1g-dev libc6-dev libgdbm-dev libncursesw5-dev build-essential \
+python-smbus python-pip python-setuptools python-dev build-essential
 
 pyenv install --list
 pyenv install 3.7.6
