@@ -28,6 +28,10 @@ sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A17031138
 sudo curl -sSL https://get.rvm.io | sudo bash -s stable
 sudo usermod -a -G rvm `whoami`
 
+# source ~/.bashrc
+# source ~/.bash_profile
+source /usr/local/rvm/scripts/rvm
+
 rvm list known
 rvm install 2.6.5
 rvm list
