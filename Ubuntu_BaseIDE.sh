@@ -11,6 +11,11 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
 exec "$SHELL"
+
+apt update -y
+apt install -y build-essential python-dev python-setuptools python-pip python-smbus build-essential \
+libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev
+
 pyenv install --list
 pyenv install 3.7.6
 pyenv versions
