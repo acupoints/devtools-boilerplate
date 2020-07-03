@@ -37,7 +37,6 @@ npm --version
 npm install -g yarn
 yarn --version
 
-## Generate GitHub SSH keys
 /**
 *Add GitLab and SSH keys.txt
 */
