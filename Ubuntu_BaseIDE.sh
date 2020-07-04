@@ -32,6 +32,7 @@ gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D69
 \curl -sSL https://get.rvm.io | bash -s stable --rails
 
 ### Recommended installation, no need to turn the wall
+########################################################################
 git clone https://github.com/rvm/rvm.git
 cat rvm/binscripts/rvm-installer | sudo bash -s stable
 echo source ~/.rvm/scripts/rvm >> ~/.bashrc
@@ -44,7 +45,14 @@ rvm list
 rvm use 2.6.5
 
 ## Install nvm
+### This method requires turning over the wall
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+### Recommended installation, no need to turn the wall
+########################################################################
+git clone https://github.com/nvm-sh/nvm.git
+cat nvm/install.sh | sudo bash
+
 nvm -v
 nvm install 12
 nvm use 12
