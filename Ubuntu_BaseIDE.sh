@@ -46,6 +46,11 @@ rvm install 2.6.5
 rvm list
 rvm use 2.6.5
 
+gem --version
+bundle --version
+gem install rails
+rails --version
+
 ## Install nvm
 ### This method requires turning over the wall
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
