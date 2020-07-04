@@ -41,6 +41,7 @@ source ~/.bashrc
 rvm --version
 
 rvm list known
+rvm list known | grep 2.6
 rvm install 2.6.5
 rvm list
 rvm use 2.6.5
@@ -58,9 +59,11 @@ source ~/.bashrc
 nvm --version
 
 nvm ls-remote
-nvm install 12
+# nvm ls-remote v12.16
+nvm ls-remote | grep v12.16
+nvm install v12.16
 nvm ls
-nvm use 12
+nvm use v12.16
 
 node --version
 npm --version
