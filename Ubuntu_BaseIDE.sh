@@ -44,7 +44,7 @@ rvm list
 rvm use 2.6.5
 
 ## Install nvm
-curl -o https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm -v
 nvm install 12
 nvm use 12
