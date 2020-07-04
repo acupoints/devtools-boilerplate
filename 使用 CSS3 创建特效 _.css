@@ -1,0 +1,14 @@
+/* 顶栏吸附，抬高层级，滚动时位置不变，左上偏移为0，宽成百分比，高固定 */
+#hd-navMiniBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+}
+.areaTop {
+    background: #29292d;
+    height: 46px;
+    padding: 10px 0 0;
+    border: none;
+}
