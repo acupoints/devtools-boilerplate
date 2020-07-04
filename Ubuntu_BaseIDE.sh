@@ -44,7 +44,9 @@ rvm list known
 rvm list known | grep 2.6
 rvm install 2.6.5
 rvm list
-rvm use 2.6.5
+# 临时设置，重新打开终端不可用
+# rvm use 2.6.5
+rvm use 2.6.5 --default
 
 gem --version
 bundle --version
