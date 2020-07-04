@@ -1,6 +1,7 @@
 /**
 * jQuery UI - v1.12.1 - 2016-09-14
 * 滚动客户区时，导航栏浮动到上层，位置固定在那里
+* 效果请参考 https://kubernetes.io/
 */
 (function($) {
     'use strict';
