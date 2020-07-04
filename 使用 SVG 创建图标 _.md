@@ -15,3 +15,4 @@
 
 ## 滚动加载
 [Get Started with Docker](https://www.docker.com/get-started)
+[HTML5 Canvas EaselJS Module](https://www.createjs.com/easeljs)
