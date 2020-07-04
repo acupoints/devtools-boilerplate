@@ -54,15 +54,22 @@ npm install -g yarn
 yarn --version
 
 /**
-*Add GitLab and SSH keys.txt
+* Generate SSH keys and add it to github or gitlab
 */
-### MINGW64:PROJECT NAME
-=================================
+### STEP 01
 ssh-keygen -t rsa -C "lanbinzheng@foxmail.com" -b 4096
 {ENTER}{ENTER}{ENTER}
+
+### STEP 02
 cat ~/.ssh/id_rsa.pub | clip
 {ENTER}
-ssh -T git@gitlab.com
+
+### STEP 03
+ssh -T git@github.com
+{yes}{ENTER}
+
+## ------------------------------
+ssh -T git@github.com
 {yes}{ENTER}
 
 ===
