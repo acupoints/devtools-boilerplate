@@ -1,4 +1,7 @@
-/* 顶栏吸附，抬高层级，滚动时位置不变，左上偏移为0，宽成百分比，高固定 */
+/*
+* 方法 01
+* 导航栏浮云到上层，滚动时位置不变
+*/
 #hd-navMiniBar {
     position: fixed;
     top: 0;
@@ -11,4 +14,32 @@
     height: 46px;
     padding: 10px 0 0;
     border: none;
+}
+
+/*
+* 方法 02
+* 导航栏浮云到上层，滚动时位置不变
+*/
+.flip-nav .td-navbar {
+    background-color: #fff!important;
+    -webkit-box-shadow: 0 1px 2px #4c4c4c;
+    box-shadow: 0 1px 2px #4c4c4c;
+}
+@media (max-width: 991.98px)
+.td-navbar {
+    padding-right: .5rem;
+    padding-left: .75rem;
+}
+
+@media (min-width: 768px)
+.td-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.td-navbar {
+    background: #30638e;
+    min-height: 4rem;
+    margin: 0;
+    z-index: 32;
 }
