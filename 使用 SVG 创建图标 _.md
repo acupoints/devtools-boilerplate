@@ -5,6 +5,7 @@
 
 ## 站内图标
 [homepage-banner-bg 异形背景](https://www.docker.com/sites/all/themes/docker/assets/images/homepage/homepage-banner-bg.svg)
+[Babel 图案背景](https://d33wubrfki0l68.cloudfront.net/f35d49d959deb5bfd7deb80c2668128367e2917c/a8232/img/babel-black.svg)
 [Font Awesome 图标字体](https://fontawesome.dashgame.com/)
 [404 Page not found 背景](https://kubernetes.io/images/texture.png)
 [icon-pencil 白色填充](https://kubernetes.io/images/icon-pencil.svg)
