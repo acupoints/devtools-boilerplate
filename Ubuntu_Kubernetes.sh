@@ -41,6 +41,7 @@ cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
 EOF
 
+rm -rf /var/lib/apt/lists/lock
 apt update -y
 
 ### STEP 02
@@ -134,3 +135,4 @@ kadm_token_hash=`openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl r
 kadm_join="kubeadm join ${inet_addr}:6443 --token ${kadm_token}     --discovery-token-ca-cert-hash sha256:${kadm_token_hash}"
 kadm_join_tips="Then you can join any number of worker nodes by running the following on each as root:"
 echo -e "\033[33m\n${kadm_join_tips}\n\033[37m\nswapoff --all\033[36m\n${kadm_join}\n\033[0m"
+
