@@ -8,11 +8,12 @@ yarn init -y
 
 ## STEP 02
 # 安装 Babel 6
-yarn add babel-cli babel-preset-es2015
+yarn add -D babel-cli babel-preset-es2015
 
 ## STEP 03
 # 配置 Babel 6
-echo '{ "presets": ["es2015"] }' > .babelrc
+# echo '{ "presets": ["es2015"] }' > .babelrc
+echo -e '{\n\t"presets": ["es2015"]\n}' > .babelrc
 
 ## STEP 04
 # 运行 Babel 6
