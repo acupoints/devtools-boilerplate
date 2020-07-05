@@ -1,5 +1,5 @@
 /**
-* 使用kubeadm安装kubenetes (ubuntu-16.04.5-desktop-amd64)
+* 使用kubeadm安装kubenetes (ubuntu-16.04.5-desktop-amd64).txt
 */
 
 ~~~删除锁定
@@ -31,6 +31,7 @@ sudo kill -9 2556 2303
 
 ~~~测试环境；参考ps afx|grep apt
 ============================================================
+sudo apt install -y curl
 sudo apt install -y apt-transport-https
 
 ============================================================
@@ -40,7 +41,7 @@ cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
 EOF
 
-apt update -y
+sudo apt update
 
 ~~~下载服务，适用于Ubuntu
 ====================================
