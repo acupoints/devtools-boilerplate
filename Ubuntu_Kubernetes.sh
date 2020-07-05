@@ -31,69 +31,63 @@ sudo kill -9 2556 2303
 
 ~~~测试环境；参考ps afx|grep apt
 ============================================================
-sudo apt install -y curl
-sudo apt install -y apt-transport-https
 
-============================================================
+### STEP 01
+### ======================================================
+apt install -y apt-transport-https
 curl -s https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | sudo apt-key add -
 
 cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
 EOF
 
-sudo apt update
+apt update -y
 
-~~~下载服务，适用于Ubuntu
-====================================
+### STEP 02
+### ======================================================
 apt install -y docker.io kubeadm
 
-~~~设置主机名
-==============================
+## 设置主机名
+## ==============================
 hostnamectl set-hostname k8s-master && su root
 
-# 推荐
-hostnamectl set-hostname literals-master && su root
-
-~~~启动服务
-==============================
+## 启动服务
+## ==============================
 systemctl enable docker.service && systemctl start docker.service
 systemctl enable kubelet.service && systemctl start kubelet.service
 
-~~~修改IP地址获取所需版本；参考ifconfig
-======================================================
-inet_addr=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr://g'`
-export verkube=v1.14.2
-export veraddress=${inet_addr}
+### STEP 03
+### ======================================================
+kg_images=`kubeadm config images list |sed 's/[-]//g'|sed 's/k8s\.gcr\.io\//export kg/g'|sed 's/:/=/g'`
+${kg_images}
+
+inet_addr=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr:/export kgadvertise=/g'`
+${inet_addr}
 
 swapoff --all
-kubeadm init --kubernetes-version=$verkube --pod-network-cidr=10.244.0.0/16 \
---service-cidr=10.96.0.0/12 --apiserver-advertise-address $veraddress
+kubeadm init --kubernetes-version=$kgkubeapiserver --pod-network-cidr=10.244.0.0/16 \
+--service-cidr=10.96.0.0/12 --apiserver-advertise-address $kgadvertise
 
-~~~修改为正确的版本及IP地址
-====================================
-export verpause=3.1
-export veretcd=3.3.10
-export vercoredns=1.3.1
+export pgrade_containerorche=mirrorgcrio
 
-docker pull mirrorgooglecontainers/kube-apiserver:$verkube
-docker pull mirrorgooglecontainers/kube-controller-manager:$verkube
-docker pull mirrorgooglecontainers/kube-scheduler:$verkube
-docker pull mirrorgooglecontainers/kube-proxy:$verkube
-docker pull mirrorgooglecontainers/pause:$verpause
-docker pull mirrorgooglecontainers/etcd:$veretcd
-docker pull coredns/coredns:$vercoredns
+docker pull ${pgrade_containerorche}/kube-apiserver:$kgkubeapiserver
+docker pull ${pgrade_containerorche}/kube-controller-manager:$kgkubeapiserver
+docker pull ${pgrade_containerorche}/kube-scheduler:$kgkubeapiserver
+docker pull ${pgrade_containerorche}/kube-proxy:$kgkubeapiserver
+docker pull ${pgrade_containerorche}/pause:$kgpause
+docker pull ${pgrade_containerorche}/etcd:$kgetcd
+docker pull ${pgrade_containerorche}/coredns:$kgcoredns
 
-~~~修改tag
-===============================
-docker tag mirrorgooglecontainers/kube-apiserver:$verkube k8s.gcr.io/kube-apiserver:$verkube
-docker tag mirrorgooglecontainers/kube-controller-manager:$verkube k8s.gcr.io/kube-controller-manager:$verkube
-docker tag mirrorgooglecontainers/kube-scheduler:$verkube k8s.gcr.io/kube-scheduler:$verkube
-docker tag mirrorgooglecontainers/kube-proxy:$verkube k8s.gcr.io/kube-proxy:$verkube
-docker tag mirrorgooglecontainers/pause:$verpause k8s.gcr.io/pause:$verpause
-docker tag mirrorgooglecontainers/etcd:$veretcd k8s.gcr.io/etcd:$veretcd
-docker tag coredns/coredns:$vercoredns k8s.gcr.io/coredns:$vercoredns
+docker tag ${pgrade_containerorche}/kube-apiserver:$kgkubeapiserver k8s.gcr.io/kube-apiserver:$kgkubeapiserver
+docker tag ${pgrade_containerorche}/kube-controller-manager:$kgkubeapiserver k8s.gcr.io/kube-controller-manager:$kgkubeapiserver
+docker tag ${pgrade_containerorche}/kube-scheduler:$kgkubeapiserver k8s.gcr.io/kube-scheduler:$kgkubeapiserver
+docker tag ${pgrade_containerorche}/kube-proxy:$kgkubeapiserver k8s.gcr.io/kube-proxy:$kgkubeapiserver
+docker tag ${pgrade_containerorche}/pause:$kgpause k8s.gcr.io/pause:$kgpause
+docker tag ${pgrade_containerorche}/etcd:$kgetcd k8s.gcr.io/etcd:$kgetcd
+docker tag ${pgrade_containerorche}/coredns:$kgcoredns k8s.gcr.io/coredns:$kgcoredns
 
-
+### STEP 04
+### ======================================================
 cat <<EOF >> /etc/sysctl.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
