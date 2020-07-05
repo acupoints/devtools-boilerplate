@@ -65,9 +65,9 @@ ${kg_images}
 inet_addr=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr:/export kgadvertise=/g'`
 ${inet_addr}
 
-swapoff --all
-kubeadm init --kubernetes-version=$kgkubeapiserver --pod-network-cidr=10.244.0.0/16 \
---service-cidr=10.96.0.0/12 --apiserver-advertise-address $kgadvertise
+# swapoff --all
+# kubeadm init --kubernetes-version=$kgkubeapiserver --pod-network-cidr=10.244.0.0/16 \
+# --service-cidr=10.96.0.0/12 --apiserver-advertise-address $kgadvertise
 
 export pgrade_containerorche=mirrorgcrio
 
