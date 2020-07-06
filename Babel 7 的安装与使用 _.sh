@@ -60,3 +60,18 @@ module.exports = {
 # module.exports = { presets: [ ... ], plugins: [ ... ] }
 #####################################################################
 
+## gyp ERR! configure error
+## gyp ERR! stack Error: Command failed: C:\Python37\python.EXE -c import sys; print "%s.%s.%s" % sys.version_info[:3];
+## gyp ERR! stack   File "<string>", line 1
+## gyp ERR! stack     import sys; print "%s.%s.%s" % sys.version_info[:3];
+## gyp ERR! stack                                ^
+## gyp ERR! stack SyntaxError: invalid syntax
+## 
+## =============================================================
+python-2.7.18.amd64.msi
+npm install node-pre-gyp -g
+
+npm install --global node-gyp@latest
+for /f "delims=" %P in ('npm prefix -g') do npm config set node_gyp "%P\node_modules\node-gyp\bin\node-gyp.js"
+
+
