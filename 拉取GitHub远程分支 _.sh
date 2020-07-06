@@ -41,3 +41,25 @@ git merge origin/master
 ## 查看当前分支与当前的分支的上一版本有何不同
 git log -p master
 
+### 目录中除了.git之外还有其它文件或目录时称为 non-bare repository
+## $ git fetch origin master:master
+## fatal: Refusing to fetch into current branch refs/heads/master of non-bare repository
+
+### 借助 git reset 改写历史
+## 1. 首先git log查看需要回退到哪个commit id。
+## 2. 然后执行git reset –hard commit_id，回退本地版本。
+## 3. 最后执行git push origin master –force，将远程版本回退。
+## 需要注意的是，这种方法彻底丢失了commit_id之后的修改。
+## 
+## 1. git rebase -i commit_id~1，进入交互式rebase
+## 2. 在git自动打开的编辑器中将该commit行首的pick命令修改为edit并保存
+## 3. 修改相应的file，在这个例子中即删除相应“私有”代码
+## 4. git add file
+## 5. git commit –amend
+## 6. 如果有冲突，解决冲突后git add file
+## 7. git rebase –continue
+## 8. git push [host] [branch] -f
+## 
+## 如果想舍弃掉整个提交，可以在第2步中，将pick改为drop，然后进入第6步
+## 这样就在不影响其他提交的情况下改写了历史
+
