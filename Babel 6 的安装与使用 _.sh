@@ -37,3 +37,4 @@ npm install -D babel-core babel-loader babel-preset-es2015 babel-preset-react
 ##         exclude: /node_modules/
 ##     }
 ## ]
+
