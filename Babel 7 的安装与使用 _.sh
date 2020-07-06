@@ -4,6 +4,7 @@ yarn remove @babel/core
 yarn remove @babel/plugin-transform-runtime
 yarn remove @babel/polyfill
 yarn remove @babel/preset-env
+yarn remove @babel/preset-react
 yarn remove @babel/runtime
 
 # 添加到devDependencies
@@ -12,6 +13,7 @@ yarn add -D @babel/core
 yarn add -D @babel/plugin-transform-runtime
 yarn add -D @babel/polyfill
 yarn add -D @babel/preset-env
+yarn add -D @babel/preset-react
 yarn add -D @babel/runtime
 
 ## 根目录创建配置文件 babel.config.js
@@ -55,11 +57,12 @@ module.exports = {
  
 ## 配置文件 .babelrc
 # {     "presets":[ ... ], "plugins":[ ... ] }
- 
+{ "presets": ["@babel/react", "@babel/env"] }
 ## 配置文件 babel.config.js
 # module.exports = { presets: [ ... ], plugins: [ ... ] }
 #####################################################################
 
+### 异常处理
 ## gyp ERR! configure error
 ## gyp ERR! stack Error: Command failed: C:\Python37\python.EXE -c import sys; print "%s.%s.%s" % sys.version_info[:3];
 ## gyp ERR! stack   File "<string>", line 1
