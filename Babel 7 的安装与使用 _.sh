@@ -91,10 +91,11 @@ module.exports = {
 ## gyp ERR! stack SyntaxError: invalid syntax
 ## 
 ## =============================================================
+
+### STEP 01
 python-2.7.18.amd64.msi
 npm install node-pre-gyp -g
-
+### STEP 02
 npm install --global node-gyp@latest
 for /f "delims=" %P in ('npm prefix -g') do npm config set node_gyp "%P\node_modules\node-gyp\bin\node-gyp.js"
-
 
