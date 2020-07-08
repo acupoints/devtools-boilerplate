@@ -75,7 +75,9 @@ module.exports = {
  
 ## 配置文件 .babelrc
 # {     "presets":[ ... ], "plugins":[ ... ] }
-{ "presets": ["@babel/react", "@babel/env"] }
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
 ## 配置文件 babel.config.js
 # module.exports = { presets: [ ... ], plugins: [ ... ] }
 #####################################################################
