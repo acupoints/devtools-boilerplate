@@ -1,11 +1,29 @@
 # 从dependencies或devDependencies移除
-yarn remove @babel/cli
-yarn remove @babel/core
-yarn remove @babel/plugin-transform-runtime
-yarn remove @babel/polyfill
-yarn remove @babel/preset-env
-yarn remove @babel/preset-react
-yarn remove @babel/runtime
+npm uninstall -D @babel/cli
+npm uninstall -D @babel/core
+npm uninstall -D @babel/plugin-transform-runtime
+npm uninstall -D @babel/polyfill
+npm uninstall -D @babel/preset-env
+npm uninstall -D @babel/preset-react
+npm uninstall -D @babel/runtime
+
+# 添加到devDependencies
+npm install -D @babel/cli
+npm install -D @babel/core
+npm install -D @babel/plugin-transform-runtime
+npm install -D @babel/polyfill
+npm install -D @babel/preset-env
+npm install -D @babel/preset-react
+npm install -D @babel/runtime
+
+# 从dependencies或devDependencies移除
+yarn remove -D @babel/cli
+yarn remove -D @babel/core
+yarn remove -D @babel/plugin-transform-runtime
+yarn remove -D @babel/polyfill
+yarn remove -D @babel/preset-env
+yarn remove -D @babel/preset-react
+yarn remove -D @babel/runtime
 
 # 添加到devDependencies
 yarn add -D @babel/cli
