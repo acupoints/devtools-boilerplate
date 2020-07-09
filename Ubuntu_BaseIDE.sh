@@ -36,7 +36,11 @@ gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D69
 ########################################################################
 git clone https://github.com/rvm/rvm.git
 cat rvm/binscripts/rvm-installer | sudo bash -s stable
+
 echo source ~/.rvm/scripts/rvm >> ~/.bashrc
+## Upgrading the RVM installation in /usr/local/rvm/
+## Upgrade of RVM in /usr/local/rvm/ is complete.
+## echo source /usr/local/rvm/scripts/rvm >> ~/.bashrc
 
 source ~/.bashrc
 rvm --version
