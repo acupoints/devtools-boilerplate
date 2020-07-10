@@ -46,6 +46,7 @@ www.your_domain.net <your_new_hash_name2>.herokudns.com
 ### 备注
 ## 绑定域名，添加证书需要先绑定信用卡
 ##
-
+### 如果你不能忍受每次访问都有几秒延迟的话，可以刷刷信息卡开通最便宜的容器实例Dyno
+##
 
 
