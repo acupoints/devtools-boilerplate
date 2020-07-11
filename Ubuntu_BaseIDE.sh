@@ -28,18 +28,10 @@ pyenv global 3.7.6
 ## Install ruby
 ### This method requires turning over the wall
 gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-# Install only RVM
-\curl -sSL https://get.rvm.io | bash -s stable
-# For installing RVM with default Ruby and Rails in one command, run
-\curl -sSL https://get.rvm.io | bash -s stable --rails
-
-### Recommended installation, no need to turn the wall
-########################################################################
 git clone https://github.com/rvm/rvm.git
 cat rvm/binscripts/rvm-installer | sudo bash -s stable
 
 echo source /usr/local/rvm/scripts/rvm >> ~/.bashrc
-# echo source ~/.rvm/scripts/rvm >> ~/.bashrc
 
 source ~/.bashrc
 rvm --version
@@ -48,8 +40,6 @@ rvm list known
 rvm list known | grep 2.6
 rvm install 2.6.5
 rvm list
-# 临时设置，重新打开终端不可用
-# rvm use 2.6.5
 rvm use 2.6.5 --default
 
 gem --version
