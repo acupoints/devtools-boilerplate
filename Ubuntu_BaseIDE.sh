@@ -69,11 +69,19 @@ yarn --version
 ###################################################
 wget --content-disposition https://go.microsoft.com/fwlink/?LinkID=760868
 dpkg -i code_*_amd64.deb
+# rm -rf code_*_amd64.deb
 
 ### Install Chrome
 ###################################################
 wget --content-disposition https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
+# rm -rf google-chrome-stable_current_amd64.deb
+
+wget --content-disposition https://dl.pstmn.io/download/latest/linux64
+tar -xzvf Postman-linux-x64-7.27.1.tar.gz
+## ln [OPTION]... TARGET... DIRECTORY
+## -s, --symbolic              make symbolic links instead of hard links
+ln -s ./Postman/Postman /usr/bin/
 
 
 /**
