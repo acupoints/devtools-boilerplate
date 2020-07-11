@@ -65,6 +65,17 @@ npm --version
 npm install -g yarn
 yarn --version
 
+### Install Visual Studio Code
+###################################################
+wget --content-disposition https://go.microsoft.com/fwlink/?LinkID=760868
+dpkg -i code_*_amd64.deb
+
+### Install Chrome
+###################################################
+wget --content-disposition https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+
 /**
 * Generate SSH keys and add it to github or gitlab
 */
