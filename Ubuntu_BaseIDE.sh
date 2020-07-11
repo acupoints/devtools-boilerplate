@@ -48,11 +48,6 @@ gem install rails
 rails --version
 
 ## Install nvm
-### This method requires turning over the wall
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-
-### Recommended installation, no need to turn the wall
-########################################################################
 git clone https://github.com/nvm-sh/nvm.git
 cat nvm/install.sh | sudo bash
 
