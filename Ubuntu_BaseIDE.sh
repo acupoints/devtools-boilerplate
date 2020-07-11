@@ -55,7 +55,6 @@ source ~/.bashrc
 nvm --version
 
 nvm ls-remote
-# nvm ls-remote v12.16
 nvm ls-remote | grep v12.16
 nvm install v12.16
 nvm ls
