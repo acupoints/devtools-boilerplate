@@ -3,6 +3,7 @@ sudo passwd root
 su root
 
 ## Install common tools
+rm -rf /var/lib/dpkg/lock
 apt install -y vim make git curl
 
 ## Install pyenv
