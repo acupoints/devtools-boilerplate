@@ -2,14 +2,6 @@
 * 使用kubeadm安装kubenetes (ubuntu-16.04.5-desktop-amd64).txt
 */
 
-~~~删除锁定
-E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
-E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
-
-==========================================================
-sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
-
 ~~~净化apt
 E: Could not get lock /var/lib/apt/lists/lock - open (11: Resource temporarily unavailable)
 E: Unable to lock directory /var/lib/apt/lists/
@@ -34,6 +26,7 @@ sudo kill -9 2556 2303
 
 ### STEP 01
 ### ======================================================
+rm -rf /var/lib/dpkg/lock
 apt install -y apt-transport-https
 curl -s https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | sudo apt-key add -
 
