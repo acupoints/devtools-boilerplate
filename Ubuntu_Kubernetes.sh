@@ -34,7 +34,6 @@ cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
 EOF
 
-rm -rf /var/lib/apt/lists/lock
 apt update -y
 
 ### STEP 02
