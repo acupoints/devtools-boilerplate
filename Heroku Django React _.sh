@@ -52,11 +52,10 @@ module.exports = {
   // ...
 }
 
-yarn build
-
-
 ## react_client/public/index.html
     <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+
+yarn build
 
 
 ## Load home page
