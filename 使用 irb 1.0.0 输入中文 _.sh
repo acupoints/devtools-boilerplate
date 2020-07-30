@@ -1,7 +1,12 @@
 ### 结论：使用irb 输入中文时请使用
-λ irb --noreadline -E GBK
+## Git Bash
+$ irb --help
+$ irb --prompt default
+
+λ irb --prompt default --noreadline -E GBK
+λ irb --prompt default --noreadline
 $ irb --prompt default --noreadline
-PS> irb --prompt default --noreadline
+> irb --prompt default --noreadline
 
 ### 下面是我尝试使用各种附加选项进入交互Shell的测试，直接使用上面那句命令更加适用
 ############################################################################
