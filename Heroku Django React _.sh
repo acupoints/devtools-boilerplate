@@ -37,6 +37,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 import django_heroku
 django_heroku.settings(locals())
 
+## Solve the problem that Django React cannot find /favicon.ico
+## django_server\urls.py
+from django.contrib import admin
+from django.urls import path
+from apis import views as apis_views
+## Solve the problem that Django React cannot find /favicon.ico
+from django.contrib.staticfiles.views import serve
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', apis_views.hello),
+    ## Solve the problem that Django React cannot find /favicon.ico
+    path('/favicon.ico', serve, {'path': '/static/favicon.ico'}),
+    path('/logo192.png', serve, {'path': '/static/logo192.png'}),
+]
+
 
 npx create-react-app react_client
 cd react_client/
