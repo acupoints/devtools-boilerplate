@@ -4,8 +4,8 @@ $ irb --help
 $ irb --prompt default
 
 λ irb --prompt default --noreadline -E GBK
-$ irb --prompt default --noreadline
-> irb --prompt default --noreadline
+$ irb --prompt default --noreadline -E GBK
+> irb --prompt default --noreadline -E GBK
 
 ### 下面是我尝试使用各种附加选项进入交互Shell的测试，直接使用上面那句命令更加适用
 ############################################################################
