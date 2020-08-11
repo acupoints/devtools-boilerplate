@@ -4,7 +4,6 @@ $ irb --help
 $ irb --prompt default
 
 λ irb --prompt default --noreadline -E GBK
-λ irb --prompt default --noreadline
 $ irb --prompt default --noreadline
 > irb --prompt default --noreadline
 
