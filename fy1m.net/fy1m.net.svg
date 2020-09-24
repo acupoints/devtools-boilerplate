@@ -18,7 +18,29 @@
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="fy1m.net.svg">
   <defs
-     id="defs2" />
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient932">
+      <stop
+         style="stop-color:#cfa5ec;stop-opacity:1"
+         offset="0"
+         id="stop928" />
+      <stop
+         style="stop-color:#3a3baf;stop-opacity:1"
+         offset="1"
+         id="stop930" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient932"
+       id="linearGradient938"
+       x1="-471.26068"
+       y1="-96.151718"
+       x2="-335.79401"
+       y2="39.314941"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -26,17 +48,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.84852814"
-     inkscape:cx="589.98652"
-     inkscape:cy="92.684906"
+     inkscape:zoom="1.003125"
+     inkscape:cx="336.49403"
+     inkscape:cy="-405.73986"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g918"
      showgrid="false"
-     inkscape:window-width="1989"
-     inkscape:window-height="1145"
-     inkscape:window-x="413"
-     inkscape:window-y="86"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      showguides="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -461,6 +483,97 @@
              sodipodi:sides="4"
              id="path854"
              style="opacity:1;fill:none;fill-opacity:1;stroke:#440da7;stroke-width:3.70531019;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+             sodipodi:type="star" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g889"
+       transform="matrix(0.50000003,0,0,0.50000003,-243.83659,264.72613)">
+      <g
+         id="g918"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <g
+           id="g945">
+          <rect
+             inkscape:export-filename="C:\Users\literal\Desktop\0924\devtools-boilerplate\fy1m.net\used0924\logo256.png"
+             inkscape:export-ydpi="96"
+             inkscape:export-xdpi="96"
+             ry="12.283883"
+             style="opacity:1;fill:url(#linearGradient938);fill-opacity:1;stroke:none;stroke-width:4.05419779;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+             id="rect875"
+             width="135.46666"
+             height="135.46666"
+             x="-471.26068"
+             y="-96.151718" />
+          <path
+             inkscape:export-ydpi="96"
+             inkscape:export-xdpi="96"
+             inkscape:export-filename="C:\Users\literal\Desktop\0924\devtools-boilerplate\fy1m.net\used0924\logo256.png"
+             transform="matrix(1.656675,0,0,1.666188,469.28553,1.8615148)"
+             inkscape:transform-center-y="-3.1975757e-06"
+             inkscape:transform-center-x="2.4217226e-05"
+             d="m -506.65464,7.187129 c 34.19619,-21.734868 -67.77173,-17.39026 -31.85068,1.3570811 35.92105,18.7473409 -18.82546,-67.3871631 -17.1006,-26.9049541 1.72485,40.482209 48.94626,-49.996903 14.75007,-28.262035 -34.1962,21.734869 67.77172,17.39026 31.85067,-1.357081 -35.92104,-18.747341 18.82546,67.387163 17.10061,26.904954 -1.72485,-40.482209 -48.94627,49.996904 -14.75007,28.262035 z"
+             inkscape:randomized="0"
+             inkscape:rounded="-1.271"
+             inkscape:flatsided="true"
+             sodipodi:arg2="1.5282144"
+             sodipodi:arg1="1.0046157"
+             sodipodi:r2="27.608522"
+             sodipodi:r1="31.879574"
+             sodipodi:cy="-19.717825"
+             sodipodi:cx="-523.75525"
+             sodipodi:sides="6"
+             id="path877"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#f4eeff;stroke-width:5.41703726;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+             sodipodi:type="star" />
+          <g
+             inkscape:export-ydpi="96"
+             inkscape:export-xdpi="96"
+             inkscape:export-filename="C:\Users\literal\Desktop\0924\devtools-boilerplate\fy1m.net\used0924\logo256.png"
+             style="stroke:none;fill:#fcfcfc;fill-opacity:1"
+             transform="matrix(1.3045844,0,0,1.3045844,380.78677,-46.678259)"
+             id="g881">
+            <path
+               sodipodi:type="star"
+               style="opacity:1;fill:#fcfcfc;fill-opacity:1;stroke:none;stroke-width:0.21276984;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+               id="path879"
+               sodipodi:sides="3"
+               sodipodi:cx="638.03864"
+               sodipodi:cy="-48.587528"
+               sodipodi:r1="4.0712223"
+               sodipodi:r2="2.0356112"
+               sodipodi:arg1="0.72425"
+               sodipodi:arg2="1.7714476"
+               inkscape:flatsided="true"
+               inkscape:rounded="0.19"
+               inkscape:randomized="0"
+               d="m 641.08797,-45.890043 c -0.88772,1.003504 -6.48489,-0.134894 -6.91009,-1.405429 -0.4252,-1.270536 3.35926,-5.548629 4.67218,-5.281598 1.31292,0.267032 3.12562,5.683524 2.23791,6.687027 z"
+               inkscape:transform-center-x="-0.30446448"
+               inkscape:transform-center-y="0.46001695"
+               transform="scale(-1)" />
+          </g>
+          <path
+             inkscape:export-ydpi="96"
+             inkscape:export-xdpi="96"
+             inkscape:export-filename="C:\Users\literal\Desktop\0924\devtools-boilerplate\fy1m.net\used0924\logo256.png"
+             transform="matrix(0.74466542,-0.19953251,0.19953251,0.74466542,9.0624696,-167.62813)"
+             inkscape:transform-center-y="-0.58615641"
+             inkscape:transform-center-x="1.0152405"
+             d="m -628.62059,86.730784 c -2.8043,2.804305 -18.06878,2.804305 -20.87308,0 -2.80431,-2.804304 -2.80431,-18.068778 0,-20.873083 2.8043,-2.804304 18.06878,-2.804304 20.87308,0 2.80431,2.804305 2.80431,18.068779 0,20.873083 z"
+             inkscape:randomized="0"
+             inkscape:rounded="0.19"
+             inkscape:flatsided="true"
+             sodipodi:arg2="1.5707963"
+             sodipodi:arg1="0.78539816"
+             sodipodi:r2="7.3797493"
+             sodipodi:r1="14.759499"
+             sodipodi:cy="76.294243"
+             sodipodi:cx="-639.05713"
+             sodipodi:sides="4"
+             id="path883"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#f0e7ff;stroke-width:5.40902039;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
              sodipodi:type="star" />
         </g>
       </g>
