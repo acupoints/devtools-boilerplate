@@ -1,0 +1,48 @@
+## 申请CSR
+# 右上角打开搜索
+# 搜索Keychain Access
+<>[Certificate Assistant][Request a Certificate From a Certificate Authority...]
+User Email Address: {******}
+Common Name: {******}
+CA Email Address: {}
+--------------------------------
+Request is: (+) Saved to disk
+(Continue)
+# 保存在桌面，创建证书时会用到
+
+
+## 创建一个新的证书
+[Certificates]
+** Software
+(+) iOS Distribution(App Store and Ad Hoc)
+** Services
+None
+(Continue)
+-----------------
+[Profiles]
+prod_name (Edit)
+#重新选择一个新日期的证书
+
+
+## 组建App上传到TestFlight
+{prod_name} > Generic iOS Device
+<Product>[Archive]
+--|--|--(Distribute App)
+--------------
+(+) App Store Connect
+(Next)
+----------------
+(+) Upload
+(Next)
+----------------
+[+] Include bitcode for iOS content
+[+] Strip Swift symbols
+[+] Upload your app's symbols to receive symbolicated reports from Apple
+(Next)
+--------------------
+(+) Automatically manage signing
+(Next)
+--------------
+(Upload)
+-----------
+(Done)
