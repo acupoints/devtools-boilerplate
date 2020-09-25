@@ -20,6 +20,7 @@ libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev libssl-dev llvm 
 openssl python-dev python-pip python-setuptools python-smbus sqlite3 \
 tk-dev xz-utils zlib1g-dev
 
+## Install the specified version
 pyenv install --list
 pyenv install 3.7.6
 pyenv versions
