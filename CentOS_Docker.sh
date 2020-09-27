@@ -1,4 +1,10 @@
+### Configure VirtualBox
 
+### Install CentOS
+
+### Install Docker
+
+### Install additional Docker tools
 git clone https://github.com/acupoints/astrology-tools.git
 
 # sudo cp astrology-tools/docker-compose-1.27.3/docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
@@ -10,5 +16,5 @@ sudo cp astrology-tools/docker-machine-v0.16.2/docker-machine-Linux-x86_64 /usr/
 sudo chmod +x /usr/local/bin/docker-machine
 docker-machine version
 
-rm -rf astrology-tools/
+## rm -rf astrology-tools/
 
