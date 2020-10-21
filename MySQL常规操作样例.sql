@@ -3,3 +3,5 @@
 create user 'tmpQ'@'%' identified by '#!2021Qpmt';
 grant select on pd.* to 'tmpQ'@'%';
 flush privileges;
+select user, host, password from mysql.user;
+
