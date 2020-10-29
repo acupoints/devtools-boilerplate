@@ -38,7 +38,7 @@ cp /etc/httpd/conf.d/welcome.conf /data/files/welcome.conf
 (OK)
 
 ## 挂载共享文件夹
-mount -t vboxsf CentOS-assets /data/file/
+mount -t vboxsf CentOS-assets /data/files
 ## 取消挂载共享文件夹
 umount /data/file/
 
