@@ -22,7 +22,7 @@ systemctl enable httpd
 mkdir -p /data/files
 ln -s /data/files  /var/www/html/
 echo "hello world" > /data/files/1.txt
-cp /etc/httpd/conf.d/welcome.conf /data/files/welcome.conf
+cp /etc/httpd/conf.d/welcome.conf.bak /data/files/welcome.conf
 
 ## 创建共享文件夹
 虚拟机|设置|共享文件夹|临时分配|添加共享文件夹
