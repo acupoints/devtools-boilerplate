@@ -1,8 +1,3 @@
-## Set up a CentOS file download server
-yum install httpd -y
-httpd -v
-service httpd start
-
 vim /etc/selinux/config
 SELINUX=disabled
 reboot
