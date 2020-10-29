@@ -10,6 +10,9 @@ vim /etc/httpd/conf/httpd.conf
 ### :set nu
 ### :42<ENTER>
  42 Listen 9581
+### 解决中文乱码
+### :32<ENTER>
+ 32 IndexOptions Charset=UTF-8
 
 mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
 
