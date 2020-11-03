@@ -3,7 +3,7 @@ curl -O https://downloads.lightbend.com/scala/2.13.3/scala-2.13.3.tgz
 mkdir /usr/local/scala
 tar xzfv scala-2.13.3.tgz -C /usr/local/scala/
 
-source /etc/profile
+vim /etc/profile
 
 # Integrated Scala
 export SCALA_HOME=/usr/local/scala/scala-2.13.3
