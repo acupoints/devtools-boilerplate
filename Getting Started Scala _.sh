@@ -11,5 +11,6 @@ export PATH=${SCALA_HOME}/bin:$PATH
 
 source /etc/profile
 
+ln -s /usr/local/scala/scala-2.13.3/bin/scala /usr/bin/scala
 scala -version
 
