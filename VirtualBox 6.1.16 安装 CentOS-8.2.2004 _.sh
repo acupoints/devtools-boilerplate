@@ -34,16 +34,11 @@
 
 ### 安装增强功能所需依赖
 #############################################
-## 重启
-init 6
-
 # dnf group install -y "Development Tools"
 dnf install -y elfutils-libelf-devel
+## 若看到 Waiting for process with pid 7464 to finish，使用 init 6 重启可解决
 
-# 右Ctrl进入宿主机->设备->安装增强功能
-
-## 重启
-init 6
+# 右Ctrl进入宿主机->设备->安装增强功能，输入 init 6 重启
 
 ### 测试粘贴复制，拖放文本文件到目录中，而非桌面
 #############################################
