@@ -46,6 +46,21 @@ init 6
 
 
 ### 系统安装后的配置
+#############################################
+### 重启之后，进入自动启动倒计时
+### Automatic boot in 25 seconds...
+### 此时进入设置菜单移除挂载，然后进入控制菜单选择重启
+
+Ethernet (enp0s3)
+------------------
+[Details]
+[+]Connect automatically (Apply)
+
+Ethernet (enp0s8)
+------------------
+[Details]
+[+]Connect automatically (Apply)
+
 [Privacy]
 **Screen Lock {Off}
 -------------------------Screen Lock
@@ -54,6 +69,8 @@ init 6
 
 [Power]
 **Blank screen --[Never]
+
+#############################################
 
 ~~~
 # cat /etc/redhat-release
