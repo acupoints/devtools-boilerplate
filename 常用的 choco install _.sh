@@ -12,6 +12,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=54616
 ###
 
 choco install vagrant
+choco install virtualbox
 
 # Install PostgreSQL 12.3
 # choco install postgresql12 --version=12.3
