@@ -14,7 +14,8 @@
 ###########################################################################
 yum install -y yum-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-yum install -y docker-ce docker-ce-cli containerd.io --nobest
+# yum install -y docker-ce docker-ce-cli containerd.io --nobest
+yum -y install docker-ce --nobest
 systemctl start docker.service
 systemctl enable docker.service
 docker --version
