@@ -19,3 +19,17 @@ systemctl start docker.service
 systemctl enable docker.service
 docker --version
 
+## 常用数据库镜像拉取
+# docker pull postgres
+# docker pull postgres:13.1
+docker pull postgres:12.5
+
+# docker pull redis
+# docker pull redis:6.0.9
+docker pull redis:5.0.10
+
+# docker pull mysql
+# docker pull mysql:8.0.22
+docker pull mysql:5.7.32
+
+
