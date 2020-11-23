@@ -19,7 +19,7 @@ systemctl start docker.service
 systemctl enable docker.service
 docker --version
 
-## 常用数据库镜像拉取
+## 常用的数据库镜像拉取
 # docker pull postgres
 # docker pull postgres:13.1
 docker pull postgres:12.5
