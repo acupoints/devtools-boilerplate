@@ -8,3 +8,14 @@
 [root@localhost gullies]# systemctl start docker.service
 [root@localhost gullies]# systemctl enable docker.service
 [root@localhost gullies]# docker --version
+
+
+## 去掉了提示符，方便整体复制，快速安装新版本
+###########################################################################
+yum install -y yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum install -y docker-ce docker-ce-cli containerd.io --nobest
+systemctl start docker.service
+systemctl enable docker.service
+docker --version
+
