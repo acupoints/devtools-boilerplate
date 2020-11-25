@@ -1,9 +1,10 @@
 ## 彻底卸载 MySQL Community 5.7.32
 [root@localhost nginx]# rpm -qa | grep -i mysql
 yum remove -y mysql-community-server-5.7.32-1.el7.x86_64
-yum remove -y mysql-community-libs-5.7.32-1.el7.x86_64
+# yum remove -y mysql-community-client-5.7.32-1.el7.x86_64
+# yum remove -y mysql-community-libs-5.7.32-1.el7.x86_64
 yum remove -y mysql57-community-release-el7-10.noarch
-yum remove -y mysql-community-client-5.7.32-1.el7.x86_64
+
 yum remove -y mysql-community-common-5.7.32-1.el7.x86_64
 
 [root@localhost nginx]# find / -name mysql
