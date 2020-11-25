@@ -1,7 +1,7 @@
 ## 卸载早期安装的版本
 yum list installed | grep docker
 yum remove -y containerd.io.x86_64
-yum remove -y docker-ce-cli.x86_64
+# yum remove -y docker-ce-cli.x86_64
 
 ## 去掉了提示符，方便整体复制，快速安装新版本
 ###########################################################################
