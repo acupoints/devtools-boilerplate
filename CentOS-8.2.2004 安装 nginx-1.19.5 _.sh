@@ -40,12 +40,14 @@ success
 
 
 ## 查找进程，退出应用
-[root@iZf8z60eamajlim8a6nbtrZ nginx]# ps -ef | grep nginx
-root       64517       1  0 07:18 ?        00:00:00 nginx: master process /usr/local/nginx/sbin/nginx
-nobody     64518   64517  0 07:18 ?        00:00:00 nginx: worker process
-root       65017   64854  0 11:16 pts/1    00:00:00 grep --color=auto nginx
-[root@iZf8z60eamajlim8a6nbtrZ nginx]# kill -QUIT 64517
-[root@iZf8z60eamajlim8a6nbtrZ nginx]# kill -QUIT 64518
+[root@localhost gullies]# ps -ef | grep nginx
+root       50190       1  0 11:23 ?        00:00:00 nginx: master process ./sbin/nginx
+nobody     50191   50190  0 11:23 ?        00:00:00 nginx: worker process
+root       54715   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost gullies]# kill -QUIT 50190
+[root@localhost gullies]# ps -ef | grep nginx
+root       54730   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost gullies]#
 
 ## 卸载应用
 whereis nginx
