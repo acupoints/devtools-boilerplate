@@ -17,7 +17,7 @@ cd /usr/local/nginx
 systemctl start nginx
 systemctl enable nginx
 
-## 设置防火墙，开放指定端口重新加载之后，即可网络访问
+## 设置防火墙，打开指定的端口重新加载之后，即可网络访问
 [root@localhost nginx]# systemctl status
 ● localhost.localdomain
     State: running
@@ -30,12 +30,13 @@ systemctl enable nginx
            │ │ ├─session-c2.scope
            │ │ │ ├─1864 gdm-session-worker [pam/gdm-launch-environment]
 
-[root@localhost nginx]# firewall-cmd --list-ports
+## 打开指定的端口并重新加载，再查询就能看到刚打开的端口
 [root@localhost nginx]# firewall-cmd --zone=public --add-port=80/tcp --permanent
 success
 [root@localhost nginx]# firewall-cmd --reload
 success
-[root@localhost nginx]#
+[root@localhost nginx]# firewall-cmd --list-ports
+80/tcp
 
 
 ## 查找进程，退出应用
