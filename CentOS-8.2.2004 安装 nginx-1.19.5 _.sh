@@ -1,3 +1,19 @@
+## 查找进程，退出应用
+[root@localhost gullies]# ps -ef | grep nginx
+root       50190       1  0 11:23 ?        00:00:00 nginx: master process ./sbin/nginx
+nobody     50191   50190  0 11:23 ?        00:00:00 nginx: worker process
+root       54715   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost gullies]# kill -QUIT 50190
+[root@localhost gullies]# ps -ef | grep nginx
+root       54730   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
+[root@localhost gullies]#
+
+## 卸载应用
+[root@localhost nginx]# whereis nginx
+nginx: /usr/local/nginx
+[root@localhost nginx]# rm -rf /usr/local/nginx
+
+
 ## 安装依赖包
 yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel
 yum install -y gcc gcc-c++
@@ -37,26 +53,6 @@ success
 success
 [root@localhost nginx]# firewall-cmd --list-ports
 80/tcp
-
-
-## 查找进程，退出应用
-[root@localhost gullies]# ps -ef | grep nginx
-root       50190       1  0 11:23 ?        00:00:00 nginx: master process ./sbin/nginx
-nobody     50191   50190  0 11:23 ?        00:00:00 nginx: worker process
-root       54715   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
-[root@localhost gullies]# kill -QUIT 50190
-[root@localhost gullies]# ps -ef | grep nginx
-root       54730   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
-[root@localhost gullies]#
-
-## 卸载应用
-whereis nginx
-rm -rf /usr/local/nginx
-
-## 查看安装目录
-[root@localhost nginx]# whereis nginx
-nginx: /usr/local/nginx
-[root@localhost nginx]#
 
 ### 补充
 ## nginx 配置https域名访问
