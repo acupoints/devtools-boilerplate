@@ -1,3 +1,19 @@
+## 彻底卸载 MySQL Community 5.7.32
+[root@localhost nginx]# rpm -qa | grep -i mysql
+yum remove -y mysql-community-server-5.7.32-1.el7.x86_64
+yum remove -y mysql-community-libs-5.7.32-1.el7.x86_64
+yum remove -y mysql57-community-release-el7-10.noarch
+yum remove -y mysql-community-client-5.7.32-1.el7.x86_64
+yum remove -y mysql-community-common-5.7.32-1.el7.x86_64
+
+[root@localhost nginx]# find / -name mysql
+rm -rf /var/lib/mysql
+rm -rf /var/lib/mysql/mysql
+rm -rf /usr/share/mysql
+##
+rm -rf /var/log/mysqld.log
+
+
 ## 下载社区版mysql
 wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
 yum install -y mysql57-community-release-el7-10.noarch.rpm
