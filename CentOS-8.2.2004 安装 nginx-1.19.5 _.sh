@@ -52,7 +52,6 @@ root       54730   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
 ## 卸载应用
 whereis nginx
 rm -rf /usr/local/nginx
-yum remove nginx
 
 ## 查看安装目录
 [root@localhost nginx]# whereis nginx
