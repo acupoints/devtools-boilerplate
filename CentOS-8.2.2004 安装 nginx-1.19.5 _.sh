@@ -1,8 +1,8 @@
-
-wget http://nginx.org/download/nginx-1.19.5.tar.gz
+##
 yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel
 yum install -y gcc gcc-c++
 
+wget http://nginx.org/download/nginx-1.19.5.tar.gz
 tar -xzfv nginx-1.19.5.tar.gz
 cd nginx-1.19.5
 ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_stub_status_module
