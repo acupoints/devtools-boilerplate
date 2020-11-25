@@ -9,9 +9,10 @@ root       54730   52949  0 14:13 pts/1    00:00:00 grep --color=auto nginx
 [root@localhost gullies]#
 
 ## 卸载应用
-[root@localhost nginx]# whereis nginx
+[root@localhost gullies]# whereis nginx
 nginx: /usr/local/nginx
-[root@localhost nginx]# rm -rf /usr/local/nginx
+[root@localhost gullies]# rm -rf /usr/local/nginx
+[root@localhost gullies]#
 
 
 ## 安装依赖包
