@@ -51,3 +51,8 @@ whereis nginx
 rm -rf /usr/local/nginx
 yum remove nginx
 
+## 查看安装目录
+[root@localhost nginx]# whereis nginx
+nginx: /usr/local/nginx
+[root@localhost nginx]#
+
