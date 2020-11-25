@@ -17,11 +17,6 @@ rm -rf /var/log/mysqld.log
 ## 下载社区版mysql
 wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
 yum install -y mysql57-community-release-el7-10.noarch.rpm
-yum install -y mysql-community-server
---------------------------------------
-All matches were filtered out by modular filtering for argument: mysql-community-server
-Error: Unable to find a match: mysql-community-server
-[root@localhost nginx]#
 
 ## 默认启用的mysql模块，会屏蔽存储库提供的软件包，所有在此禁用，以便从存储库安装。
 yum module disable mysql
