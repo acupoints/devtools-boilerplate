@@ -25,4 +25,6 @@ docker pull redis:5.0.10
 # docker pull mysql:8.0.22
 docker pull mysql:5.7.32
 
+# docker pull nginx
+docker pull nginx:1.19.5
 
