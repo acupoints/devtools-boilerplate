@@ -14,8 +14,9 @@ EOF
 
 yum install -y docker-ce kubeadm --nobest
 
-##
+## 请修改主机名为 gullies-minion<编号> 样式，以便区分结点
 hostnamectl set-hostname gullies-minion01 && su root
+
 systemctl enable docker.service && systemctl start docker.service
 systemctl enable kubelet.service && systemctl start kubelet.service
 
