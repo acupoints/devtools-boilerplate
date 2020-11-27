@@ -2,9 +2,9 @@
 [root@localhost gullies]# vim /etc/systemd/logind.conf
 :/Lid
 :set nu
-:25<ENTER>
+:24<ENTER>
 :noh
-HandleLidSwitchExternalPower=locK
+HandleLidSwitch=lock
 
 [root@localhost gullies]# systemctl restart systemd-logind
 
