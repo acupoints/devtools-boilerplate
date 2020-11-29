@@ -23,8 +23,6 @@ yum install -y docker-ce kubeadm --nobest
 hostnamectl set-hostname gullies-minion01 && su root
 hostnamectl set-hostname gullies-minion02 && su root
 hostnamectl set-hostname gullies-minion03 && su root
-hostnamectl set-hostname gullies-minion04 && su root
-hostnamectl set-hostname gullies-minion05 && su root
 
 systemctl enable docker.service && systemctl start docker.service
 systemctl enable kubelet.service && systemctl start kubelet.service
@@ -49,3 +47,17 @@ systemctl daemon-reload
 kubeadm join 192.168.56.106:6443 --token 3v86cj.97zrefw5nj25ayhc \
     --discovery-token-ca-cert-hash sha256:0705d49b098d4d5c6a8622983b97658c690ac12066b27da7d72c90dcbd5e771d
 
+
+### 可选设置
+##########################################################
+cat <<EOF >> /etc/sysctl.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+
+sudo sysctl --system
+
+# 未使用 network plugin 或 kubeadm reset 时删除了 /etc/cni/net.d，
+# 再次安装时忘记应用网络插件，同样会出现 NotReady，其它原因可通过以下命令查找
+kubectl get pod -n kube-system
+journalctl -f -u kubelet
