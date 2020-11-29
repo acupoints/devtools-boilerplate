@@ -51,7 +51,10 @@ kadm_token=`kubeadm token create`
 kadm_token_hash=`openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'`
 kadm_join="kubeadm join ${inet_addr}:6443 --token ${kadm_token}     --discovery-token-ca-cert-hash sha256:${kadm_token_hash}"
 kadm_join_tips="Then you can join any number of worker nodes by running the following on each as root:"
-echo -e "\033[33m\n${kadm_join_tips}\n\033[37m\nswapoff --all\033[36m\n${kadm_join}\n\033[0m"
+cmd1="swapoff --all"
+cmd2="sudo sed -i '/ swap / s/^#*\(.*\)$/#\1/g' /etc/fstab"
+cmd3="# cat /etc/fstab"
+echo -e "\033[33m\n${kadm_join_tips}\n\033[37m\n${cmd1}\n${cmd2}\n${cmd3}\n\033[36m\n${kadm_join}\n\033[0m"
 
 ### 样例输出
 kubeadm join 192.168.56.106:6443 --token 3v86cj.97zrefw5nj25ayhc \
