@@ -29,4 +29,17 @@ swapoff --all
 kubeadm join 192.168.56.106:6443 --token 3v86cj.97zrefw5nj25ayhc \
     --discovery-token-ca-cert-hash sha256:0705d49b098d4d5c6a8622983b97658c690ac12066b27da7d72c90dcbd5e771d
 
+~~~使用 "systemd" as the Docker cgroup driver
+============================================
+### Docker cgroup driver
+[preflight] Running pre-flight checks
+        [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd".
+--------------------------------------------------------------
+# docker info | grep Cgroup
+cat>>/etc/docker/daemon.json<<EOF
+{
+   "exec-opts": ["native.cgroupdriver=systemd"]
+}
+EOF
+
 
