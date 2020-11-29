@@ -29,6 +29,9 @@ export verkube=v1.19.4
 export veraddress=${inet_addr}
 
 swapoff --all
+sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+# cat /etc/fstab
+
 kubeadm init --kubernetes-version=$verkube --pod-network-cidr=10.244.0.0/16 \
 --service-cidr=10.96.0.0/12 --apiserver-advertise-address $veraddress \
 --image-repository registry.aliyuncs.com/google_containers
