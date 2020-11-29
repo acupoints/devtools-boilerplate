@@ -1,3 +1,7 @@
+## 若已安装，想重新安装或调换主从角色，可重置
+## Performs a best effort revert of changes made to this host by 'kubeadm init' or 'kubeadm join'
+kubeadm reset
+
 ~~~关闭防火墙
 ==================
 systemctl stop firewalld.service 
