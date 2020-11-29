@@ -26,6 +26,9 @@ systemctl enable kubelet.service && systemctl start kubelet.service
 
 ##
 swapoff --all
+sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+# cat /etc/fstab
+
 kubeadm join 192.168.56.106:6443 --token 3v86cj.97zrefw5nj25ayhc \
     --discovery-token-ca-cert-hash sha256:0705d49b098d4d5c6a8622983b97658c690ac12066b27da7d72c90dcbd5e771d
 
