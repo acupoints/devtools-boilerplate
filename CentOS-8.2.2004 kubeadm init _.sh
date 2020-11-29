@@ -33,7 +33,7 @@ export verkube=`kubelet --version | awk -F" " '{print $2}'`
 export veraddress=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr://g'`
 
 swapoff --all
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo sed -i '/ swap / s/^#*\(.*\)$/#\1/g' /etc/fstab
 # cat /etc/fstab
 
 kubeadm init --kubernetes-version=$verkube --pod-network-cidr=10.244.0.0/16 \
