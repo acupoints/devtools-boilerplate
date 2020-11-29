@@ -3,12 +3,11 @@
 kubeadm reset
 rm -rf $HOME/.kube
 
-~~~关闭防火墙
-==================
+### 关闭防火墙
 systemctl stop firewalld.service 
 systemctl disable firewalld.service
 
-~~~禁用SELinux
+### 禁用SELinux
 sed -ie 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 cd /etc/yum.repos.d/
 wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
@@ -24,8 +23,7 @@ EOF
 yum install -y docker-ce kubeadm --nobest
 hostnamectl set-hostname gullies-master && su root
 
-~~~启动服务
-==============================
+### 启动服务
 systemctl enable docker.service && systemctl start docker.service
 systemctl enable kubelet.service && systemctl start kubelet.service
 
@@ -52,14 +50,12 @@ kubeadm init --kubernetes-version=$verkube --pod-network-cidr=10.244.0.0/16 \
 --service-cidr=10.96.0.0/12 --apiserver-advertise-address $veraddress \
 --image-repository registry.aliyuncs.com/google_containers
 
-~~~执行下面的命令
-===========================================================================
+### 执行下面的命令
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-~~~创建flannel
-==============================
+### 创建flannel
 echo ## The GitHub configuration file cannot be downloaded >> /etc/hosts
 echo 199.232.68.133 raw.githubusercontent.com >> /etc/hosts
 
@@ -68,7 +64,6 @@ kubectl apply -f kube-flannel.yml
 
 ##
 ### 可选设置
-##########################################################
 cat <<EOF >> /etc/sysctl.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
