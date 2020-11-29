@@ -66,24 +66,6 @@ echo 199.232.68.133 raw.githubusercontent.com >> /etc/hosts
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 kubectl apply -f kube-flannel.yml
 
-~~~使用 "systemd" as the Docker cgroup driver
-============================================
-### Docker cgroup driver
-[preflight] Running pre-flight checks
-        [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd".
---------------------------------------------------------------
-# docker info | grep Cgroup
-cat>>/etc/docker/daemon.json<<EOF
-{
-   "exec-opts": ["native.cgroupdriver=systemd"]
-}
-EOF
-
-##
-systemctl restart docker
-docker info | grep Cgroup
-systemctl daemon-reload
-
 ~~~查看集群命令
 ============================================
 inet_addr=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr://g'`
