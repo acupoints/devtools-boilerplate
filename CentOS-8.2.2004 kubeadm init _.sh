@@ -29,9 +29,8 @@ hostnamectl set-hostname gullies-master && su root
 systemctl enable docker.service && systemctl start docker.service
 systemctl enable kubelet.service && systemctl start kubelet.service
 
-inet_addr=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr://g'`
-export verkube=v1.19.4
-export veraddress=${inet_addr}
+export verkube=`kubelet --version | awk -F" " '{print $2}'`
+export veraddress=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr://g'`
 
 swapoff --all
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
