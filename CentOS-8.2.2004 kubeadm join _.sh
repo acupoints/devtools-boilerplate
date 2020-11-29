@@ -44,10 +44,20 @@ systemctl restart docker
 docker info | grep Cgroup
 systemctl daemon-reload
 
+### 查看集群命令
+##########################################################
+inet_addr=`ifconfig enp0s8 | sed -n '2p' | awk '{print $2}' | sed 's/addr://g'`
+kadm_token=`kubeadm token create`
+kadm_token_hash=`openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'`
+kadm_join="kubeadm join ${inet_addr}:6443 --token ${kadm_token}     --discovery-token-ca-cert-hash sha256:${kadm_token_hash}"
+kadm_join_tips="Then you can join any number of worker nodes by running the following on each as root:"
+echo -e "\033[33m\n${kadm_join_tips}\n\033[37m\nswapoff --all\033[36m\n${kadm_join}\n\033[0m"
+
+### 样例输出
 kubeadm join 192.168.56.106:6443 --token 3v86cj.97zrefw5nj25ayhc \
     --discovery-token-ca-cert-hash sha256:0705d49b098d4d5c6a8622983b97658c690ac12066b27da7d72c90dcbd5e771d
 
-
+##
 ### 可选设置
 ##########################################################
 cat <<EOF >> /etc/sysctl.conf
@@ -61,3 +71,5 @@ sudo sysctl --system
 # 再次安装时忘记应用网络插件，同样会出现 NotReady，其它原因可通过以下命令查找
 kubectl get pod -n kube-system
 journalctl -f -u kubelet
+
+
