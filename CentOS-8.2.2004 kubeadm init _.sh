@@ -76,8 +76,8 @@ kadm_join_tips="Then you can join any number of worker nodes by running the foll
 echo -e "\033[33m\n${kadm_join_tips}\n\033[37m\nswapoff --all\033[36m\n${kadm_join}\n\033[0m"
 
 
-~~~暂未用到
-============================================
+### 可选设置
+##########################################################
 cat <<EOF >> /etc/sysctl.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
@@ -85,8 +85,9 @@ EOF
 
 sudo sysctl --system
 
-Another app is currently holding the yum lock; waiting for it to exit...
-~~~
-rm -f /var/run/yum.pid
+# 未使用 network plugin 或 kubeadm reset 时删除了 /etc/cni/net.d，
+# 再次安装时忘记应用网络插件，同样会出现 NotReady，其它原因可通过以下命令查找
+kubectl get pod -n kube-system
+journalctl -f -u kubelet
 
 
