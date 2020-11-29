@@ -42,4 +42,10 @@ cat>>/etc/docker/daemon.json<<EOF
 }
 EOF
 
+##
+systemctl restart docker
+docker info | grep Cgroup
+systemctl daemon-reload
+
+
 
