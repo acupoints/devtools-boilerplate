@@ -66,7 +66,7 @@ echo 199.232.68.133 raw.githubusercontent.com >> /etc/hosts
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 kubectl apply -f kube-flannel.yml
 
-
+##
 ### 可选设置
 ##########################################################
 cat <<EOF >> /etc/sysctl.conf
