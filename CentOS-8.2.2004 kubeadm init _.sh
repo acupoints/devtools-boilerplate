@@ -36,6 +36,18 @@ swapoff --all
 sudo sed -i '/ swap / s/^#*\(.*\)$/#\1/g' /etc/fstab
 # cat /etc/fstab
 
+# docker info | grep Cgroup
+cat>>/etc/docker/daemon.json<<EOF
+{
+   "exec-opts": ["native.cgroupdriver=systemd"]
+}
+EOF
+
+##
+systemctl restart docker
+docker info | grep Cgroup
+systemctl daemon-reload
+
 kubeadm init --kubernetes-version=$verkube --pod-network-cidr=10.244.0.0/16 \
 --service-cidr=10.96.0.0/12 --apiserver-advertise-address $veraddress \
 --image-repository registry.aliyuncs.com/google_containers
