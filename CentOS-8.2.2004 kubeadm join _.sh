@@ -27,7 +27,7 @@ hostnamectl set-hostname gullies-minion03 && su root
 systemctl enable docker.service && systemctl start docker.service
 systemctl enable kubelet.service && systemctl start kubelet.service
 
-##
+## 如若重置，请从这里开始安装
 swapoff --all
 sudo sed -i '/ swap / s/^#*\(.*\)$/#\1/g' /etc/fstab
 # cat /etc/fstab
