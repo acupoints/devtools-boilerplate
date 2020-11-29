@@ -33,8 +33,6 @@ kubeadm init --kubernetes-version=$verkube --pod-network-cidr=10.244.0.0/16 \
 --service-cidr=10.96.0.0/12 --apiserver-advertise-address $veraddress \
 --image-repository registry.aliyuncs.com/google_containers
 
-
-
 ~~~执行下面的命令
 ===========================================================================
   mkdir -p $HOME/.kube
@@ -49,6 +47,23 @@ echo 199.232.68.133 raw.githubusercontent.com >> /etc/hosts
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 kubectl apply -f kube-flannel.yml
 
+~~~使用 "systemd" as the Docker cgroup driver
+============================================
+### Docker cgroup driver
+[preflight] Running pre-flight checks
+        [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd".
+--------------------------------------------------------------
+# docker info | grep Cgroup
+cat>>/etc/docker/daemon.json<<EOF
+{
+   "exec-opts": ["native.cgroupdriver=systemd"]
+}
+EOF
+
+##
+systemctl restart docker
+docker info | grep Cgroup
+systemctl daemon-reload
 
 ~~~查看集群命令
 ============================================
