@@ -28,3 +28,7 @@ docker pull mysql:5.7.32
 # docker pull nginx
 docker pull nginx:1.19.5
 
+# docker pull mariadb
+docker pull mariadb:10.5.8
+
+
