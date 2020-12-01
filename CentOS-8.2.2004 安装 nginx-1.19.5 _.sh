@@ -143,4 +143,8 @@ Aliyun Certificate Download
         }
     }
     
-    
+## 重启 nginx
+sbin/nginx -s reload
+
+
+
