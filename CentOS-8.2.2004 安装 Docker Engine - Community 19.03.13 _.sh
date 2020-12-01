@@ -31,4 +31,7 @@ docker pull nginx:1.19.5
 # docker pull mariadb
 docker pull mariadb:10.5.8
 
+# docker pull ubuntu
+docker pull ubuntu:18.04
+
 
