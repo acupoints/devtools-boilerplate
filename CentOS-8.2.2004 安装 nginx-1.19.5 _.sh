@@ -150,9 +150,7 @@ Aliyun Certificate Download
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --add-port=8000/tcp --permanent
 firewall-cmd --reload
+## 查看打开的端口
 firewall-cmd --list-ports
-
-## 
-# 80/tcp 8000/tcp
 
 
