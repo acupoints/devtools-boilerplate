@@ -16,6 +16,7 @@ nginx: /usr/local/nginx
 
 
 ## 安装依赖包
+###############################################
 yum install -y pcre pcre-devel zlib zlib-devel openssl openssl-devel
 yum install -y gcc gcc-c++
 
@@ -29,6 +30,8 @@ cd nginx-1.19.5
 make && make install
 cd /usr/local/nginx
 ./sbin/nginx
+
+###############################################
 
 ## 启动服务，设置开机运行
 systemctl start nginx
