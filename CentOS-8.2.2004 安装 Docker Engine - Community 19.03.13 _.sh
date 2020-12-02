@@ -37,6 +37,7 @@ docker pull ubuntu:18.04
 ## 生态脚本控制工具
 # docker pull node
 docker pull node:12.16.3
+# docker pull node:12.20.0
 
 # docker pull ruby
 docker pull ruby:2.6.5
@@ -45,3 +46,5 @@ docker pull ruby:2.6.5
 # docker pull python:3.7.6
 docker pull python:3.7.9
 # docker pull python:3.8.6
+
+
