@@ -148,10 +148,11 @@ Aliyun Certificate Download
     
 ## 重启 nginx
 firewall-cmd --zone=public --add-port=80/tcp --permanent
-# firewall-cmd --reload
 firewall-cmd --zone=public --add-port=8000/tcp --permanent
 firewall-cmd --reload
-[root@localhost nginx]# firewall-cmd --list-ports
-80/tcp 8000/tcp
+firewall-cmd --list-ports
+
+## 
+# 80/tcp 8000/tcp
 
 
