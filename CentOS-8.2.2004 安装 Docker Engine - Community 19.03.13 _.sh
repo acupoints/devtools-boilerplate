@@ -44,4 +44,4 @@ docker pull ruby:2.6.5
 # docker pull python
 # docker pull python:3.7.6
 docker pull python:3.7.9
-
+# docker pull python:3.8.6
