@@ -42,6 +42,6 @@ docker pull node:12.16.3
 docker pull ruby:2.6.5
 
 # docker pull python
-docker pull python:3.7.6
-
+# docker pull python:3.7.6
+docker pull python:3.7.9
 
