@@ -41,6 +41,9 @@ docker pull nginx:1.19.5-alpine
 docker pull node:12.20.0
 docker pull node:12.20.0-alpine
 docker pull node:12.20.0-alpine3.12
+# docker pull node:14.15.1
+# docker pull node:14.15.1-alpine
+# docker pull node:14.15.1-alpine3.12
 
 # docker pull ruby
 # docker pull ruby:2.6.5
