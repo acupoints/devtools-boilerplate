@@ -18,8 +18,10 @@ docker --version
 docker pull postgres:12.5
 
 # docker pull redis
-# docker pull redis:6.0.9
-docker pull redis:5.0.10
+docker pull redis:6.0.9
+docker pull redis:6.0.9-alpine
+docker pull redis:6.0.9-alpine3.12
+# docker pull redis:5.0.10
 
 # docker pull mysql
 # docker pull mysql:8.0.22
