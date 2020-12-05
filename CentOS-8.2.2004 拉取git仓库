@@ -1,0 +1,8 @@
+## 删除，克隆
+rm -rf astrology-tools/
+git clone https://github.com/acupoints/astrology-tools.git
+
+## 拉取，重置
+git fetch --all
+git reset --hard origin/master
+
