@@ -146,11 +146,18 @@ Aliyun Certificate Download
         }
     }
     
-## 重启 nginx
+# nginx:1.19.5
 firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
 firewall-cmd --zone=public --add-port=8000/tcp --permanent
+# postgres:12.5
+firewall-cmd --zone=public --add-port=5432/tcp --permanent
+# redis:5.0.10
+firewall-cmd --zone=public --add-port=6379/tcp --permanent
+# mysql:5.7.32
+firewall-cmd --zone=public --add-port=3306/tcp --permanent
+# mongo:4.4.2
+firewall-cmd --zone=public --add-port=27017/tcp --permanent
 firewall-cmd --reload
-## 查看打开的端口
 firewall-cmd --list-ports
-
 
