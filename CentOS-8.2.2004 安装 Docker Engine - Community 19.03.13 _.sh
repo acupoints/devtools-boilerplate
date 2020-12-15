@@ -16,6 +16,7 @@ docker --version
 # docker pull postgres
 # docker pull postgres:13.1
 docker pull postgres:12.5
+docker pull postgres:12.5-alpine
 
 # docker pull redis
 docker pull redis:6.0.9
