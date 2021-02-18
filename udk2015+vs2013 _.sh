@@ -20,6 +20,7 @@ build run
 ## UGA Window 1
 ## UGA Window 2
 ########################################
+## 请切换至英文输入法，UGA无法识别中文输入
 Shell> fs0:
 FS0:\> dir h*
 FS0:\> Hello{TAB}
