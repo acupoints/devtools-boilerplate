@@ -10,6 +10,7 @@ cd ..
 Install.cmd
 
 ### Run the simulator
+set CYGWIN_HOME=C:\MyWorkSpace\BaseTools\Bin\CYGWIN_NT-5.1-i686
 set PYTHON_HOME=C:\Python37
 edksetup.bat --nt32
 
