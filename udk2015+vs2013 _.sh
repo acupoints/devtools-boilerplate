@@ -17,3 +17,12 @@ edksetup.bat --nt32
 build -t VS2013x86
 build run
 
+## UGA Window 1
+## UGA Window 2
+########################################
+Shell> fs0:
+FS0:\> dir h*
+FS0:\> Hello{TAB}
+UEFI Hello World!
+FS0:\> 
+
