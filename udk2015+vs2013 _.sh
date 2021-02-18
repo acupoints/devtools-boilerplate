@@ -3,7 +3,7 @@
 ### UDK2015.MyWorkSpace.zip Extract here
 ### BaseTools(Windows).zip Extract files... MyWorkSpace
 ### C:\MyWorkSpace\CryptoPkg\Library\OpensslLib
-tar -xzf openssl-1.0.2d.tar.gz
+### openssl-1.0.2d.tar.gz 解压到当前目录
 cd openssl-1.0.2d
 patch -p0 -i ..\EDKII_openssl-1.0.2d.patch
 cd ..
