@@ -12,9 +12,9 @@ Install.cmd
 ### Run the simulator
 set CYGWIN_HOME=C:\MyWorkSpace\BaseTools\Bin\CYGWIN_NT-5.1-i686
 set PYTHON_HOME=C:\Python37
-edksetup.bat --nt32
 
-build -t VS2013x86
+edksetup.bat --nt32
+build -t VS2013x86 -b RELEASE
 build run
 
 ## UGA Window 1
