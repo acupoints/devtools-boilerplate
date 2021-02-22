@@ -29,3 +29,18 @@ FS0:\> Hello{TAB}
 UEFI Hello World!
 FS0:\> 
 
+===================================
+## 设置32位edk开发环境
+edksetup.bat --nt32
+
+## 运行32位模拟器，打包64位的efi应用是无法正常使用的
+build -a IA32 run
+
+## 真机需要打包64位的efi应用，32位的efi程序无法正常执行
+## 已打包的efi应用不会重新打包，需要清理打包目录
+build -p MdeModulePkg\MdeModulePkg.dsc -m MdeModulePkg\Application\HelloWorld\HelloWorld.inf -a X64
+build -p MdeModulePkg\MdeModulePkg.dsc -m MdeModulePkg\Application\HelloWorld\HelloWorld.inf -a IA32
+
+build -p MdeModulePkg\MdeModulePkg.dsc -m MdeModulePkg\Application\MemoryProfileInfo\MemoryProfileInfo.inf -a X64
+build -p MdeModulePkg\MdeModulePkg.dsc -m MdeModulePkg\Application\MemoryProfileInfo\MemoryProfileInfo.inf -a IA32
+
