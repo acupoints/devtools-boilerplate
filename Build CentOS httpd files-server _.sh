@@ -34,7 +34,9 @@ ln -s /data/files  /var/www/html/
 (OK)
 
 ## 挂载共享文件夹
+## 如果使用的是CentOS 8.2.2004可以直接在编辑共享文件夹中设置挂载点为/data/files
 mount -t vboxsf CentOS-assets /data/files
+
 echo "hello world" > /data/files/1.txt
 cp /etc/httpd/conf.d/welcome.conf.bak /data/files/welcome.conf
 
@@ -45,4 +47,11 @@ umount /data/file/
 ## 防火墙可以不用设置
 systemctl stop firewalld
 systemctl disable firewalld
+
+## 在服务器的浏览器地址栏输入URL测试访问
+http://localhost:9581/files/
+http://127.0.0.1:9581/files/
+http://192.168.56.101:9581/files/
+
+
 
