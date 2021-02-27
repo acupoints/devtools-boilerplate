@@ -34,7 +34,6 @@ ln -s /data/files  /var/www/html/
 (OK)
 
 ## 挂载共享文件夹
-## 如果使用的是CentOS 8.2.2004可以直接在编辑共享文件夹中设置挂载点为/data/files
 mount -t vboxsf CentOS-assets /data/files
 
 echo "hello world" > /data/files/1.txt
