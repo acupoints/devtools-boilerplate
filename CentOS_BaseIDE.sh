@@ -20,6 +20,8 @@ pyenv versions
 pyenv global 3.7.6
 
 ## Install ruby
+## 适用于 Ubuntu 18.04 LTS (Bionic Beaver)
+## 适用于 CentOS-7-x86_64-DVD-2009
 ### This method requires turning over the wall
 gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 git clone https://github.com/rvm/rvm.git
