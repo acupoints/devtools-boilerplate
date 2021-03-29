@@ -52,6 +52,7 @@ cat nvm/install.sh | sudo bash
 source ~/.bashrc
 nvm --version
 
+sudo mkdir ~/.nvm/alias
 nvm ls-remote
 nvm ls-remote | grep v12.16
 nvm install v12.16
