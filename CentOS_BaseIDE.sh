@@ -44,6 +44,8 @@ gem install rails
 rails --version
 
 ## Install nvm
+## 适用于 Ubuntu 18.04 LTS (Bionic Beaver)
+## 适用于 CentOS-7-x86_64-DVD-2009
 git clone https://github.com/nvm-sh/nvm.git
 cat nvm/install.sh | sudo bash
 
