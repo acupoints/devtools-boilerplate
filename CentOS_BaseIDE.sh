@@ -52,7 +52,7 @@ cat nvm/install.sh | sudo bash
 source ~/.bashrc
 nvm --version
 
-sudo mkdir ~/.nvm/alias
+sudo mkdir -p ~/.nvm/alias/lts
 nvm ls-remote
 nvm ls-remote | grep v12.16
 nvm install v12.16
@@ -63,3 +63,4 @@ node --version
 npm --version
 npm install -g yarn
 yarn --version
+
