@@ -43,7 +43,7 @@ bundle --version
 gem install rails
 rails --version
 
-## Install nvm
+## Install nvm (root)
 ## 适用于 Ubuntu 18.04 LTS (Bionic Beaver)
 ## 适用于 CentOS-7-x86_64-DVD-2009
 git clone https://github.com/nvm-sh/nvm.git
@@ -52,7 +52,6 @@ cat nvm/install.sh | sudo bash
 source ~/.bashrc
 nvm --version
 
-sudo mkdir -p ~/.nvm/alias/lts
 nvm ls-remote
 nvm ls-remote | grep v12.16
 nvm install v12.16
